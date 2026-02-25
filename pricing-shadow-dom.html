@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestCompany Pricing - Shadow DOM Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>TestCompany Pricing (Shadow DOM Test)</h1>
+        <p>Pricing cards are rendered in Shadow DOM</p>
+    </div>
+
+    <div id="pricing-container"></div>
+
+    <script>
+        // Create pricing cards in Shadow DOM
+        const container = document.getElementById('pricing-container');
+        const shadow = container.attachShadow({ mode: 'open' });
+
+        // Add styles to shadow DOM
+        const style = document.createElement('style');
+        style.textContent = `
+            .pricing-container {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .pricing-card {
+                background: white;
+                border-radius: 8px;
+                padding: 30px;
+                width: 300px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            .plan-name {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #333;
+            }
+            .price {
+                font-size: 36px;
+                font-weight: bold;
+                color: #0066cc;
+                margin: 20px 0;
+            }
+            .period {
+                font-size: 16px;
+                color: #666;
+            }
+            .features {
+                list-style: none;
+                padding: 0;
+                margin: 20px 0;
+            }
+            .features li {
+                padding: 8px 0;
+                border-bottom: 1px solid #eee;
+            }
+            .features li:before {
+                content: "✓ ";
+                color: #0066cc;
+                font-weight: bold;
+            }
+            .cta-button {
+                background: #0066cc;
+                color: white;
+                border: none;
+                padding: 12px 30px;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                width: 100%;
+            }
+        `;
+
+        // Create pricing content
+        const content = document.createElement('div');
+        content.className = 'pricing-container';
+        content.innerHTML = `
+            <div class="pricing-card">
+                <div class="plan-name">Starter (Shadow DOM)</div>
+                <div class="price">
+                    $29
+                    <span class="period">/month</span>
+                </div>
+                <ul class="features">
+                    <li>Up to 5 users</li>
+                    <li>10 GB storage</li>
+                    <li>Email support</li>
+                    <li>Basic analytics</li>
+                </ul>
+                <button class="cta-button">Start Free Trial</button>
+            </div>
+
+            <div class="pricing-card">
+                <div class="plan-name">Professional (Shadow DOM)</div>
+                <div class="price">
+                    $99
+                    <span class="period">/month</span>
+                </div>
+                <ul class="features">
+                    <li>Up to 25 users</li>
+                    <li>100 GB storage</li>
+                    <li>Priority support</li>
+                    <li>Advanced analytics</li>
+                </ul>
+                <button class="cta-button">Start Free Trial</button>
+            </div>
+
+            <div class="pricing-card">
+                <div class="plan-name">Enterprise (Shadow DOM)</div>
+                <div class="price">
+                    $299
+                    <span class="period">/month</span>
+                </div>
+                <ul class="features">
+                    <li>Unlimited users</li>
+                    <li>Unlimited storage</li>
+                    <li>24/7 dedicated support</li>
+                    <li>Custom analytics</li>
+                </ul>
+                <button class="cta-button">Contact Sales</button>
+            </div>
+        `;
+
+        shadow.appendChild(style);
+        shadow.appendChild(content);
+
+        console.log('Pricing cards rendered in Shadow DOM');
+    </script>
+</body>
+</html>

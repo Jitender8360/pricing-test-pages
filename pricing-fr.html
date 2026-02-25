@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestCompany Tarifs - France</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .region-badge {
+            background: #003399;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .pricing-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .pricing-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .plan-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #003399;
+            margin: 20px 0;
+        }
+        .period {
+            font-size: 16px;
+            color: #666;
+        }
+        .tax-note {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .features li:before {
+            content: "✓ ";
+            color: #003399;
+            font-weight: bold;
+        }
+        .cta-button {
+            background: #003399;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .cta-button:hover {
+            background: #002266;
+        }
+        .trial-badge {
+            background: #00cc66;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .popular {
+            border: 2px solid #003399;
+            position: relative;
+        }
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: #003399;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="region-badge">🇫🇷 France</div>
+        <h1>Tarifs TestCompany</h1>
+        <p>Choisissez le plan parfait pour votre entreprise</p>
+    </div>
+
+    <div class="pricing-container">
+        <!-- Plan Débutant -->
+        <div class="pricing-card">
+            <div class="trial-badge">Essai gratuit 14 jours</div>
+            <div class="plan-name">Débutant</div>
+            <div class="price">
+                29 €
+                <span class="period">/mois</span>
+            </div>
+            <div class="tax-note">TVA incluse (20%)</div>
+            <ul class="features">
+                <li>Jusqu'à 5 utilisateurs</li>
+                <li>10 Go de stockage</li>
+                <li>Support par email</li>
+                <li>Analyses de base</li>
+                <li>Accès API (1000 appels/jour)</li>
+            </ul>
+            <button class="cta-button">Commencer l'essai gratuit</button>
+        </div>
+
+        <!-- Plan Professionnel -->
+        <div class="pricing-card popular">
+            <div class="popular-badge">PLUS POPULAIRE</div>
+            <div class="trial-badge">Essai gratuit 14 jours</div>
+            <div class="plan-name">Professionnel</div>
+            <div class="price">
+                99 €
+                <span class="period">/mois</span>
+            </div>
+            <div class="tax-note">TVA incluse (20%)</div>
+            <ul class="features">
+                <li>Jusqu'à 25 utilisateurs</li>
+                <li>100 Go de stockage</li>
+                <li>Support prioritaire</li>
+                <li>Analyses avancées</li>
+                <li>Accès API (10,000 appels/jour)</li>
+                <li>Intégrations personnalisées</li>
+                <li>SSO (Authentification unique)</li>
+            </ul>
+            <button class="cta-button">Commencer l'essai gratuit</button>
+        </div>
+
+        <!-- Plan Entreprise -->
+        <div class="pricing-card">
+            <div class="plan-name">Entreprise</div>
+            <div class="price">
+                299 €
+                <span class="period">/mois</span>
+            </div>
+            <div class="tax-note">TVA incluse (20%)</div>
+            <ul class="features">
+                <li>Utilisateurs illimités</li>
+                <li>Stockage illimité</li>
+                <li>Support dédié 24/7</li>
+                <li>Analyses personnalisées</li>
+                <li>Appels API illimités</li>
+                <li>Intégrations avancées</li>
+                <li>SSO Entreprise</li>
+                <li>Garantie SLA</li>
+                <li>Formation personnalisée</li>
+            </ul>
+            <button class="cta-button">Contacter les ventes</button>
+        </div>
+    </div>
+
+    <!-- Section de tarification annuelle -->
+    <div style="text-align: center; margin-top: 40px; padding: 20px; background: white; border-radius: 8px;">
+        <h3>Économisez 20% avec la facturation annuelle</h3>
+        <p>Payez annuellement et obtenez 2 mois gratuits sur tous les plans</p>
+    </div>
+</body>
+</html>

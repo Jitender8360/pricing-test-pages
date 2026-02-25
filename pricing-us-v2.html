@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestCompany Pricing - United States (Updated)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .region-badge {
+            background: #0066cc;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .pricing-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .pricing-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .plan-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #0066cc;
+            margin: 20px 0;
+        }
+        .period {
+            font-size: 16px;
+            color: #666;
+        }
+        .tax-note {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .features li:before {
+            content: "✓ ";
+            color: #0066cc;
+            font-weight: bold;
+        }
+        .cta-button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .cta-button:hover {
+            background: #0052a3;
+        }
+        .trial-badge {
+            background: #00cc66;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .popular {
+            border: 2px solid #0066cc;
+            position: relative;
+        }
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: #0066cc;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .new-badge {
+            background: #ff6600;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="region-badge">🇺🇸 United States</div>
+        <h1>TestCompany Pricing</h1>
+        <p>Choose the perfect plan for your business</p>
+    </div>
+
+    <div class="pricing-container">
+        <!-- Starter Plan - PRICE INCREASED -->
+        <div class="pricing-card">
+            <div class="trial-badge">30-day free trial</div>
+            <div class="plan-name">Starter</div>
+            <div class="price">
+                $39
+                <span class="period">/month</span>
+            </div>
+            <div class="tax-note">Sales tax calculated at checkout</div>
+            <ul class="features">
+                <li>Up to 5 users</li>
+                <li>10 GB storage</li>
+                <li>Email support</li>
+                <li>Basic analytics</li>
+                <li>API access (1000 calls/day)</li>
+            </ul>
+            <button class="cta-button">Start Free Trial</button>
+        </div>
+
+        <!-- Professional Plan - PRICE INCREASED -->
+        <div class="pricing-card popular">
+            <div class="popular-badge">MOST POPULAR</div>
+            <div class="trial-badge">30-day free trial</div>
+            <div class="plan-name">Professional</div>
+            <div class="price">
+                $119
+                <span class="period">/month</span>
+            </div>
+            <div class="tax-note">Sales tax calculated at checkout</div>
+            <ul class="features">
+                <li>Up to 50 users</li>
+                <li>200 GB storage</li>
+                <li>Priority support</li>
+                <li>Advanced analytics</li>
+                <li>API access (25,000 calls/day)</li>
+                <li>Custom integrations</li>
+                <li>SSO (Single Sign-On)</li>
+                <li>Dedicated account manager</li>
+            </ul>
+            <button class="cta-button">Start Free Trial</button>
+        </div>
+
+        <!-- NEW: Business Plan -->
+        <div class="pricing-card">
+            <div class="new-badge">NEW PLAN</div>
+            <div class="trial-badge">30-day free trial</div>
+            <div class="plan-name">Business</div>
+            <div class="price">
+                $199
+                <span class="period">/month</span>
+            </div>
+            <div class="tax-note">Sales tax calculated at checkout</div>
+            <ul class="features">
+                <li>Up to 100 users</li>
+                <li>500 GB storage</li>
+                <li>24/7 priority support</li>
+                <li>Premium analytics</li>
+                <li>Unlimited API calls</li>
+                <li>Advanced integrations</li>
+                <li>Enterprise SSO</li>
+                <li>Custom reporting</li>
+            </ul>
+            <button class="cta-button">Start Free Trial</button>
+        </div>
+
+        <!-- Enterprise Plan - NEW CTA -->
+        <div class="pricing-card">
+            <div class="plan-name">Enterprise</div>
+            <div class="price">
+                Custom
+                <span class="period">pricing</span>
+            </div>
+            <div class="tax-note">Sales tax calculated at checkout</div>
+            <ul class="features">
+                <li>Unlimited users</li>
+                <li>Unlimited storage</li>
+                <li>24/7 dedicated support</li>
+                <li>Custom analytics</li>
+                <li>Unlimited API calls</li>
+                <li>Advanced integrations</li>
+                <li>Enterprise SSO</li>
+                <li>SLA guarantee</li>
+                <li>Custom training</li>
+                <li>On-premise deployment</li>
+            </ul>
+            <button class="cta-button">Request Demo</button>
+        </div>
+    </div>
+
+    <!-- Annual Pricing Section -->
+    <div style="text-align: center; margin-top: 40px; padding: 20px; background: white; border-radius: 8px;">
+        <h3>Save 25% with Annual Billing</h3>
+        <p>Pay yearly and get 3 months free on all plans</p>
+    </div>
+</body>
+</html>

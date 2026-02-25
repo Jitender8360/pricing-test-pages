@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Test Pages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        .test-page {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-page h3 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        .test-page a {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .test-page a:hover {
+            background: #0052a3;
+        }
+        code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pricing Test Pages for price_ai_bot</h1>
+    <p>Test pages for validating production challenge scenarios.</p>
+
+    <div class="test-page">
+        <h3>🇺🇸 US Pricing (Tax Excluded)</h3>
+        <p>Tests regional pricing with tax excluded (sales tax at checkout)</p>
+        <code>region: US, tax_treatment: excluded</code>
+        <br>
+        <a href="pricing-us.html">View Page</a>
+    </div>
+
+    <div class="test-page">
+        <h3>🇪🇺 EU Pricing (VAT Included)</h3>
+        <p>Tests regional pricing with VAT included (20%)</p>
+        <code>region: EU, tax_treatment: included</code>
+        <br>
+        <a href="pricing-eu.html">View Page</a>
+    </div>
+
+    <div class="test-page">
+        <h3>🇫🇷 French Pricing</h3>
+        <p>Tests language variations without pricing changes</p>
+        <code>region: EU, language: fr, tax_treatment: included</code>
+        <br>
+        <a href="pricing-fr.html">View Page</a>
+    </div>
+
+    <div class="test-page">
+        <h3>👻 Shadow DOM Test</h3>
+        <p>Tests complex scraping with Shadow DOM rendering</p>
+        <code>wait_for: .pricing-card, wait_browser: 2000</code>
+        <br>
+        <a href="pricing-shadow-dom.html">View Page</a>
+    </div>
+
+    <div class="test-page">
+        <h3>📊 Updated Pricing (v2)</h3>
+        <p>Tests price change detection (Starter: $39, Professional: $119, New Business plan)</p>
+        <code>Compare with pricing-us.html</code>
+        <br>
+        <a href="pricing-us-v2.html">View Page</a>
+    </div>
+
+    <hr>
+    <p><strong>Documentation:</strong></p>
+    <ul>
+        <li><a href="README.md">README.md</a> - Quick reference</li>
+        <li><a href="LOCAL_TESTING_GUIDE.md">LOCAL_TESTING_GUIDE.md</a> - Testing guide</li>
+    </ul>
+
+    <p><strong>GitHub:</strong> <a href="https://github.com/jitender8360/pricing-test-pages">Repository</a></p>
+</body>
+</html>
